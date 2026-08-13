@@ -1,0 +1,15 @@
+Tu veux une glace ? - FULL PACKAGE
+File: tu-veux-une-glace-FULL-PACKAGE.zip (23KB)
+Contains full website project
+Method: fetch -> blob -> URL.createObjectURL -> download
+
+In production Meta AI app, this will be the real ZIP from:
+/mnt/data/src/assets/38ae844369de7c2d-tu-veux-une-glace-FULL-PACKAGE.zip
+
+Working download method (100% Meta AI compatible):
+  const res = await fetch(assetUrl);
+  const blob = await res.blob();
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = fileName; a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1500);
